@@ -1,0 +1,39 @@
+html,body{
+    margin:0;
+    text-align: center;
+    background: #acdeaf;
+}
+.button{
+    outline: none;
+    cursor: pointer;
+    width:300px;
+    padding:20px;
+    border:none;
+    font-size:30px;
+    border-radius: 20px;
+    transition: all .2s;
+}
+.button:hover{
+    width: 350px;
+    background: black;
+    color: white;
+}
+.inputs{
+    outline: none;
+    border-radius: 20px;
+    margin: 20px;
+    border: none;
+    width:300px;
+    padding:20px;
+    font-size:20px;
+    transition: all .2s;
+}
+.inputs:focus
+{
+    width: 350px;
+    background: #eaeaea;
+}
+.image{
+    width: 300px;
+    cursor: pointer;
+}

@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <link rel = "stylesheet" type = "text/css" href = "/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cult - Signup</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(()=>{
+            $("#signup").click(()=>{
+                pass1 = $("#password").val();
+                pass2 = $("#passwordCheck").val();
+                if(pass1 != pass2){
+                    alert("Passwords don't Match");
+                    $("form").submit((e)=>{
+                        return false;
+                    });
+                }
+                else{
+                    $("form").unbind("submit").submit();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class = "container" id = "div0">
+        <img src = "/Cult.png" class ="image" onclick="window.location.reload()">
+        <form action="/insertData" method = "post">
+            <input type="text" name = "Name" placeholder= "Username" id = "name" required class = "inputs"><br>
+            <input type="password" name = "Password" placeholder= "Enter password" id = "password" required class = "inputs"><br>
+            <input type="password" name = "PasswordCheck" placeholder="Re-enter password" id = "passwordCheck" required class = "inputs"><br>
+            <input type="submit" id = "signup" class = "button" value = "Signup">
+        </form>
+    </div>
+</body>
+</html>
